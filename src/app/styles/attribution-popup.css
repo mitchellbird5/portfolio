@@ -1,0 +1,113 @@
+@tailwind components;
+
+@keyframes popup-grow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popup-shrink {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+}
+
+
+
+@layer components {
+
+  .skill-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* adjustable */
+    backdrop-filter: blur(2px);       /* optional, looks great */
+    z-index: 40;
+
+    animation: overlay-fade 0.25s ease forwards;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-popup {
+    @apply fixed z-50 p-6 bg-surface-light dark:bg-surface-dark
+      rounded-xl shadow-xl border border-primary-light dark:border-primary-dark
+      text-text-light dark:text-text-dark
+      pointer-events-auto;
+
+    animation: popup-grow 0.35s ease forwards;
+    max-width: 60vw;
+    max-height: 30vh;
+  }
+
+  @media (max-width: 768px) {
+    .skill-popup {
+      max-height: 60vh;
+      min-width: 90vw;
+    }
+  }
+
+  /* Title */
+  .skill-popup-title {
+    @apply text-lg font-semibold mb-2;
+  }
+
+  /* Title hover styling */
+  .link-title {
+    @apply text-lg font-semibold mb-2 underline-offset-2
+      hover:text-primary-light dark:hover:text-primary-dark;
+  }
+
+  /* Attribution text */
+  .skill-popup-attribution {
+    @apply text-sm mb-1;
+  }
+
+  /* License text */
+  .skill-popup-license {
+    @apply text-sm text-gray-600 dark:text-gray-400;
+  }
+
+  .skill-popup-license a {
+    @apply underline hover:text-primary-light dark:hover:text-primary-dark;
+  }
+
+  /* Bottom right "Source" link */
+  .skill-popup-source {
+    @apply mt-3 flex justify-end;
+  }
+
+  .skill-popup-source-link {
+    @apply text-xs text-gray-500 dark:text-gray-400
+      hover:text-primary-light dark:hover:text-primary-dark;
+  }
+
+  /* Shown state */
+  .skill-popup.show {
+    @apply opacity-100;
+  }
+}

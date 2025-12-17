@@ -1,0 +1,51 @@
+@tailwind components;
+
+@layer components {
+  /* Layout wrapper */
+  .about-layout {
+    @apply flex flex-col md:flex-row gap-8;
+  }
+
+  /* Main text wrapper */
+  .about-text {
+    @apply flex-1 space-y-4;
+  }
+
+  .about-paragraph {
+    @apply text-gray-900 dark:text-gray-100 text-lg leading-relaxed;
+  }
+
+  /* Image + socials container */
+  .about-image-socials {
+    @apply flex flex-col items-center gap-4;
+  }
+
+  /* Profile image wrapper */
+  .about-image-group {
+    @apply relative;
+  }
+
+  /* Circular image frame */
+  .about-image-frame {
+    @apply w-48 h-48 relative rounded-full overflow-hidden border-4
+           border-primary-light dark:border-primary-dark
+           transition-all duration-300 group-hover:scale-110;
+  }
+
+  /* Glow overlay */
+  .about-image-glow {
+    @apply absolute inset-0 rounded-full bg-primary-light dark:bg-primary-dark
+           opacity-0 group-hover:opacity-10 transition-opacity;
+  }
+
+  /* Social icons container (always under image, centered) */
+  .about-socials-container {
+    @apply flex flex-row gap-4 justify-center mt-2;
+  }
+
+  /* Social icon styling */
+  .social-icon {
+    @apply text-gray-400 dark:text-gray-400 transition-all
+           hover:scale-110 hover:text-primary-light dark:hover:text-primary-dark;
+  }
+}

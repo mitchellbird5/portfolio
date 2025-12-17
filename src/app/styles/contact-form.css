@@ -1,0 +1,40 @@
+@tailwind components;
+
+@layer components {
+  .contact-container {
+    @apply max-w-2xl mx-auto;
+  }
+
+  .contact-intro {
+    @apply text-center text-text-light/80 dark:text-text-dark/80 mb-8 text-lg;
+  }
+
+  .contact-form {
+    @apply max-w-lg mx-auto flex flex-col gap-4;
+  }
+
+  .contact-input {
+    @apply p-3 rounded 
+          bg-surface-light dark:bg-surface-dark 
+          text-text-light dark:text-text-dark 
+          placeholder-text-light/50 dark:placeholder-text-dark/50
+          focus:outline-none focus:ring-2 
+          focus:ring-primary-light dark:focus:ring-primary-dark;
+  }
+
+  .contact-textarea {
+    @apply p-3 rounded 
+          bg-surface-light dark:bg-surface-dark 
+          text-text-light dark:text-text-dark 
+          placeholder-text-light/50 dark:placeholder-text-dark/50
+          focus:outline-none focus:ring-2 
+          focus:ring-primary-light dark:focus:ring-primary-dark;
+  }
+
+  .contact-submit {
+    @apply bg-primary-light dark:bg-primary-dark
+          text-text-dark
+          font-bold py-3 px-6 rounded
+          transition-transform hover:scale-105;
+  }
+}

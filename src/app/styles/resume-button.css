@@ -1,0 +1,21 @@
+@tailwind components;
+
+@layer components {
+  .resume-button-wrapper {
+    @apply flex items-center;
+    height: 40px; /* Match ThemeToggle height */
+  }
+
+  .resume-button {
+    @apply flex items-center justify-center h-full
+           rounded-lg
+           bg-primary-light dark:bg-primary-dark
+           text-white
+           font-semibold
+           text-base md:text-lg /* slightly larger to match icon weight */
+           shadow-md dark:shadow-lg
+           hover:scale-105 hover:shadow-xl
+           transition-all duration-300 ease-in-out
+           cursor-pointer;
+  }
+}
