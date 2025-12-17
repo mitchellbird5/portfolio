@@ -130,16 +130,13 @@ export default function Skills({ align, skillsData }: SkillsProps) {
           <div ref={scrollRef} className="skill-scroll">
             <div
               className={`skill-track ${shouldScroll ? "scrolling" : "static"} ${isPaused ? "paused" : ""}`}
-                style={
-                  shouldScroll
-                    ? {
-                        display: "flex",
-                        flexWrap: "nowrap",
-                        animation: `marquee ${duration}s linear infinite`,
-                        transform: "translateX(0)",
-                      }
-                    : {}
-                }
+              style={
+                shouldScroll
+                  ? ({
+                      "--marquee-duration": `${duration}s`,
+                    } as React.CSSProperties)
+                  : undefined
+              }
             >
               {skillsToRender.map((skill, idx) => (
                 <div
