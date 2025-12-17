@@ -92,7 +92,14 @@
     display: flex;
     flex-wrap: nowrap;
     width: max-content; /* ensure no wrapping */
-    animation: marquee linear infinite;
+    /* animation: marquee linear infinite; */
+  }
+
+  .skill-track.scrolling {
+    animation-name: marquee;
+    animation-duration: var(--marquee-duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   .skill-track.paused {
@@ -101,6 +108,10 @@
 
   .skill-track.static {
     @apply flex-wrap justify-center;
+  }
+
+  .skill-track.scrolling:hover {
+    animation-play-state: paused;
   }
 
   @media (min-width: 768px) {
@@ -182,10 +193,6 @@
   /* Smooth infinite marquee */
   .animate-marquee {
     animation: marquee 50s linear infinite;
-  }
-
-  .animate-marquee:hover {
-    animation-play-state: paused;
   }
 
   @keyframes marquee {
