@@ -1,0 +1,19 @@
+@tailwind components;
+
+@layer components {
+  .navbar {
+    @apply fixed w-full backdrop-blur-md z-50 py-4 px-8 flex justify-between items-center;
+
+    /* Light mode semi-transparent */
+    background-color: rgb(var(--tw-bg-light-rgb) / 0.9);
+  }
+
+  .dark .navbar {
+    /* Dark mode semi-transparent */
+    background-color: rgb(var(--tw-bg-dark-rgb) / 0.9);
+  }
+
+  .navbar-title {
+    @apply text-primary-light dark:text-primary-dark font-bold text-xl;
+  }
+}

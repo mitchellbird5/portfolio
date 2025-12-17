@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  .cursor-gradient {
+    @apply fixed inset-0 pointer-events-none opacity-20 transition-all duration-200;
+
+    /* Light mode gradient */
+    @apply bg-gradient-to-tr from-primary-light/30 to-transparent;
+
+    /* Dark mode gradient */
+    @apply dark:from-primary-dark/20;
+  }
+}

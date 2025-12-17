@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .footer {
+    @apply bg-footer-light dark:bg-footer-dark
+     text-text-light dark:text-text-dark 
+     py-8 px-6 md:px-12 text-center space-y-2
+  }
+
+  .footer-text {
+    @apply text-sm md:text-base;
+  }
+
+  .footer-copy {
+    @apply font-medium mt-2;
+  }
+}

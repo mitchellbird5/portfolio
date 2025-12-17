@@ -1,0 +1,32 @@
+@tailwind components;
+
+@layer components {
+  .edu-card {
+    @apply bg-surface-light dark:bg-surface-dark p-6 rounded-lg border-l-4 
+          transition-all hover:bg-surface-light/80 dark:hover:bg-surface-dark/80 
+          hover:translate-x-2;
+  }
+
+  .edu-card-clickable {
+    @apply cursor-pointer;
+  }
+
+  .edu-degree {
+    @apply text-xl font-bold text-text-light dark:text-text-dark 
+          group-hover:text-primary-light dark:group-hover:text-primary-dark 
+          transition-colors;
+  }
+
+  .edu-school {
+    @apply text-gray-400 dark:text-gray-400;
+  }
+
+  .edu-period {
+    @apply text-primary-light dark:text-primary-dark text-sm;
+  }
+
+  .edu-description {
+    @apply text-gray-700 dark:text-gray-300 mb-3;
+  }
+
+}
