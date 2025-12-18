@@ -43,7 +43,7 @@ const experiences: ExperienceItem[] = [
 const education: EducationItem[] = [
   {
     school: "University of Southampton",
-    degree: "Master of Engineering - Aerounatics & Astronautics",
+    degree: "Master of Engineering - Aeronautics & Astronautics",
     period: "2018 - 2022",
     description: "Focused on computational and numerical methods. Created a 2-dimensional Python thermal solver for final group thesis. Graduated with First Class honours.",
     url: "https://www.southampton.ac.uk/courses/aeronautics-astronautics-spacecraft-engineering-degree-meng",
