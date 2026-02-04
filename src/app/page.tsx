@@ -53,6 +53,24 @@ const education: EducationItem[] = [
 
 const projects: ProjectCardProps[] = [
   {
+    title: "MediaRS [WIP]",
+    description: "A web app that allows users to compare different recommendation methods for different media types.",
+    imageUrl: "/images/mediars.png",
+    link: "https://www.media-rs-frontend.vercel.app",
+    githubLink: "https://github.com/mitchellbird5/media-rs",
+    techLinks: [
+      { href: 'https://angular.dev', label: 'Angular' },
+      { href: 'https://www.typescriptlang.org', label: 'TypeScript' },
+      { href: 'https://www.python.org/', label: 'Python' },
+      { href: 'https://www.djangoproject.com/', label: 'Django' },
+      { href: 'https://developer.mozilla.org/en-US/docs/Web/CSS', label: 'CSS' },
+      { href: 'https://www.postgresql.org/', label: 'PostgreSQL'},
+      { href: 'https://fastapi.tiangolo.com/', label: 'FastAPI'},
+      { href: 'https://restfulapi.net/', label: 'RESTful API'},
+      { href: 'https://www.docker.com/', label: 'Docker'}
+    ] as TechLink[]
+  },
+  {
     title: "RouteCause",
     description: "A web app that allows users to calculate the cost and emissions for a given car journey.",
     imageUrl: "/images/routecause.png",

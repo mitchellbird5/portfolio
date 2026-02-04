@@ -2,6 +2,15 @@ import { SkillsData } from "@/app/components/Skills";
 
 export const portfolioSkills: SkillsData = {
   Frontend: [
+    {
+      name: "Angular",
+      icon: "/icons/brands/angular.svg",
+      url: "https://angular.io/",
+      attribution: {
+        description: "Attributed to Angular and individual contributors.", 
+        logoUrl: "https://angular.dev/press-kit"
+      },
+    },
     { 
       name: "React", 
       icon: "/icons/brands/react.svg",
@@ -91,6 +100,27 @@ export const portfolioSkills: SkillsData = {
         licenseUrl: "https://nodejs.org/en/about/branding",
         logoUrl: "https://uxwing.com/express-js-icon/",
       }
+    },
+    {
+      name: "FastAPI",
+      icon: "/icons/brands/fastapi.svg",
+      url: "https://fastapi.tiangolo.com/",
+      attribution: {
+        license: "MIT License",
+        licenseUrl: "https://opensource.org/license/mit",
+        logoUrl: "https://commons.wikimedia.org/wiki/File:FastAPI_logo.svg"
+      },
+    },
+    {
+      name: "Django",
+      icon: "/icons/brands/django.svg",
+      url: "https://www.djangoproject.com/",
+      attribution: {
+        description: "The Django Software Foundation (DSF) is the owner of the Django trademark.",
+        license: "Creative Commons Attribution 3.0 Unported license",
+        licenseUrl: "https://creativecommons.org/licenses/by/3.0/deed.en",
+        logoUrl: "https://www.djangoproject.com/community/logos/"
+      },
     },
     { 
       name: "Rest APIs", 
