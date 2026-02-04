@@ -32,7 +32,7 @@ export default function About({ align }: AboutProps) {
         {/* Image + Socials container */}
         <div className="about-image-socials">
           {/* Profile image */}
-          <div className="about-image-group w-48 h-48 relative group">
+          {/* <div className="about-image-group w-48 h-48 relative group">
             <div className="about-image-frame">
               <Image
                 src="/images/headshot.jpg"
@@ -43,7 +43,7 @@ export default function About({ align }: AboutProps) {
               />
             </div>
             <div className="about-image-glow" />
-          </div>
+          </div> */}
 
           {/* Social icons wrapper */}
           <div className="about-socials-container">
